@@ -1,4 +1,4 @@
-import os
+   import os
 import sys
 import time
 import math
@@ -554,15 +554,16 @@ def apply_seasonal_css(season):
         text-align: center;
         margin-bottom: 1rem;
         font-weight: 800;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     }}
     
     .sub-header {{
         font-size: 1.5rem;
-        color: #666;
+        color: #2c3e50;
         text-align: center;
         margin-bottom: 2rem;
-        font-weight: 300;
+        font-weight: 500;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
     }}
     
     .seasonal-bg {{
@@ -572,24 +573,26 @@ def apply_seasonal_css(season):
         margin-bottom: 2rem;
         color: white;
         text-align: center;
-        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+        border: 3px solid rgba(255,255,255,0.2);
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
     }}
     
     .metric-card {{
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
         padding: 1.5rem;
         border-radius: 15px;
         border: none;
-        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.2);
         color: white;
         text-align: center;
         transition: all 0.3s ease;
-        border: 2px solid transparent;
+        border: 2px solid rgba(255,255,255,0.1);
     }}
     
     .metric-card:hover {{
         transform: translateY(-5px);
-        box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+        box-shadow: 0 12px 35px rgba(0,0,0,0.3);
         border: 2px solid rgba(255,255,255,0.3);
     }}
     
@@ -597,73 +600,106 @@ def apply_seasonal_css(season):
         font-size: 2.2rem;
         font-weight: bold;
         margin-bottom: 0.5rem;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        color: #ffffff;
     }}
     
     .metric-label {{
         font-size: 0.9rem;
-        opacity: 0.9;
-        font-weight: 500;
+        opacity: 0.95;
+        font-weight: 600;
+        color: #ecf0f1;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
     }}
     
     .risk-high {{
-        background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+        background: linear-gradient(135deg, #e74c3c, #c0392b);
         color: white;
         padding: 0.5rem 1rem;
         border-radius: 20px;
         font-weight: bold;
-        box-shadow: 0 2px 8px rgba(255,107,107,0.3);
+        box-shadow: 0 2px 8px rgba(231,76,60,0.4);
+        border: 1px solid rgba(255,255,255,0.2);
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
     }}
     
     .risk-medium {{
-        background: linear-gradient(135deg, #ffa726, #ff9800);
+        background: linear-gradient(135deg, #f39c12, #e67e22);
         color: white;
         padding: 0.5rem 1rem;
         border-radius: 20px;
         font-weight: bold;
-        box-shadow: 0 2px 8px rgba(255,167,38,0.3);
+        box-shadow: 0 2px 8px rgba(243,156,18,0.4);
+        border: 1px solid rgba(255,255,255,0.2);
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
     }}
     
     .risk-low {{
-        background: linear-gradient(135deg, #66bb6a, #4caf50);
+        background: linear-gradient(135deg, #27ae60, #229954);
         color: white;
         padding: 0.5rem 1rem;
         border-radius: 20px;
         font-weight: bold;
-        box-shadow: 0 2px 8px rgba(102,187,106,0.3);
+        box-shadow: 0 2px 8px rgba(39,174,96,0.4);
+        border: 1px solid rgba(255,255,255,0.2);
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
     }}
     
     .stButton button {{
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
         color: white;
         border: none;
         padding: 0.7rem 2rem;
         border-radius: 25px;
         font-weight: bold;
         transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(102,126,234,0.3);
+        box-shadow: 0 4px 15px rgba(44,62,80,0.3);
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
     }}
     
     .stButton button:hover {{
         transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(102,126,234,0.4);
-        background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+        box-shadow: 0 6px 20px rgba(44,62,80,0.4);
+        background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+        color: white;
     }}
     
     .data-card {{
-        background: rgba(255,255,255,0.95);
+        background: rgba(255,255,255,0.98);
         padding: 1.5rem;
         border-radius: 15px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        border-left: 5px solid #667eea;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        border-left: 5px solid #3498db;
         margin: 1rem 0;
         transition: all 0.3s ease;
         backdrop-filter: blur(10px);
+        border: 1px solid rgba(52,152,219,0.2);
+        color: #2c3e50;
     }}
     
     .data-card:hover {{
         transform: translateX(5px);
-        box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        box-shadow: 0 6px 25px rgba(0,0,0,0.2);
+        border-left: 5px solid #2980b9;
+    }}
+    
+    .data-card h3 {{
+        color: #2c3e50;
+        margin-bottom: 1rem;
+        font-weight: 700;
+        border-bottom: 2px solid #ecf0f1;
+        padding-bottom: 0.5rem;
+    }}
+    
+    .data-card p {{
+        color: #34495e;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+    }}
+    
+    .data-card strong {{
+        color: #2c3e50;
+        font-weight: 700;
     }}
     
     .forecast-card {{
@@ -671,17 +707,26 @@ def apply_seasonal_css(season):
         padding: 1.5rem;
         border-radius: 15px;
         margin: 1rem 0;
-        border: 1px solid rgba(255,255,255,0.3);
+        border: 2px solid rgba(255,255,255,0.5);
         box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        color: #2c3e50;
+    }}
+    
+    .forecast-card h3 {{
+        color: #2c3e50;
+        margin-bottom: 1rem;
+        font-weight: 700;
     }}
     
     .tab-content {{
-        background: rgba(255,255,255,0.95);
+        background: rgba(255,255,255,0.98);
         padding: 2rem;
         border-radius: 15px;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        box-shadow: 0 4px 25px rgba(0,0,0,0.1);
         backdrop-filter: blur(10px);
         margin-bottom: 2rem;
+        border: 1px solid rgba(236,240,241,0.8);
+        color: #2c3e50;
     }}
     
     .mobile-optimized {{
@@ -690,53 +735,146 @@ def apply_seasonal_css(season):
     
     .mobile-section {{
         margin-bottom: 1.5rem;
-        padding: 1rem;
-        background: rgba(255,255,255,0.9);
-        border-radius: 10px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        padding: 1.5rem;
+        background: rgba(255,255,255,0.95);
+        border-radius: 12px;
+        box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        border: 1px solid rgba(236,240,241,0.8);
+        color: #2c3e50;
     }}
     
     .footer {{
         text-align: center;
-        color: #666;
+        color: #2c3e50;
         margin-top: 3rem;
         padding: 2rem;
-        border-top: 1px solid #e0e0e0;
-        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        border-top: 2px solid #bdc3c7;
+        background: linear-gradient(135deg, #ecf0f1 0%, #bdc3c7 100%);
         border-radius: 10px;
+        font-weight: 600;
     }}
     
     .success-badge {{
-        background: linear-gradient(135deg, #00b09b, #96c93d);
+        background: linear-gradient(135deg, #27ae60, #229954);
         color: white;
         padding: 0.3rem 0.8rem;
         border-radius: 15px;
         font-size: 0.8rem;
         font-weight: bold;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
     }}
     
     .warning-badge {{
-        background: linear-gradient(135deg, #f7971e, #ffd200);
+        background: linear-gradient(135deg, #f39c12, #e67e22);
         color: white;
         padding: 0.3rem 0.8rem;
         border-radius: 15px;
         font-size: 0.8rem;
         font-weight: bold;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
     }}
     
     .error-badge {{
-        background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+        background: linear-gradient(135deg, #e74c3c, #c0392b);
         color: white;
         padding: 0.3rem 0.8rem;
         border-radius: 15px;
         font-size: 0.8rem;
         font-weight: bold;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
     }}
     
     .season-indicator {{
         font-size: 3rem;
         text-align: center;
         margin: 1rem 0;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }}
+    
+    /* Improved text contrast */
+    .stTextInput > div > div > input {{
+        color: #2c3e50;
+        font-weight: 500;
+    }}
+    
+    .stSelectbox > div > div > div {{
+        color: #2c3e50;
+        font-weight: 500;
+    }}
+    
+    .stSlider > div > div > div {{
+        color: #2c3e50;
+    }}
+    
+    .stDateInput > div > div > input {{
+        color: #2c3e50;
+        font-weight: 500;
+    }}
+    
+    .stExpander {{
+        border: 1px solid #bdc3c7;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+    }}
+    
+    .stExpander > summary {{
+        color: #2c3e50;
+        font-weight: 700;
+        font-size: 1.1rem;
+    }}
+    
+    /* Streamlit native elements contrast improvement */
+    .st-bb {{
+        background-color: rgba(255,255,255,0.95);
+    }}
+    
+    .st-at {{
+        background-color: #3498db;
+    }}
+    
+    .st-bh {{
+        color: #2c3e50;
+    }}
+    
+    .st-c0 {{
+        color: #2c3e50;
+    }}
+    
+    .st-c1 {{
+        color: #3498db;
+    }}
+    
+    .st-c2 {{
+        color: #e74c3c;
+    }}
+    
+    .stAlert {{
+        border-radius: 10px;
+        border: 1px solid;
+    }}
+    
+    .stInfo {{
+        background-color: rgba(52,152,219,0.1);
+        border: 1px solid #3498db;
+        color: #2c3e50;
+    }}
+    
+    .stSuccess {{
+        background-color: rgba(39,174,96,0.1);
+        border: 1px solid #27ae60;
+        color: #2c3e50;
+    }}
+    
+    .stWarning {{
+        background-color: rgba(243,156,18,0.1);
+        border: 1px solid #f39c12;
+        color: #2c3e50;
+    }}
+    
+    .stError {{
+        background-color: rgba(231,76,60,0.1);
+        border: 1px solid #e74c3c;
+        color: #2c3e50;
     }}
     
     @media (max-width: 768px) {{
@@ -746,6 +884,7 @@ def apply_seasonal_css(season):
         
         .sub-header {{
             font-size: 1.1rem;
+            color: #2c3e50;
         }}
         
         .metric-card {{
